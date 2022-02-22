@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.logo {
+    font-family: 'Lalezar', cursive;
+    font-size: 45pt;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    color:mediumslateblue;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+body{
+    background-color: black;
+}
