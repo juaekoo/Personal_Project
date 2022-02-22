@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="./Header.css">
+    <link rel="stylesheet" type="text/css" href="./login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="./moviedata.js"></script>
     <style type="text/css">
@@ -30,7 +31,7 @@
                 <li><a href="./collection.html">컬렉션</a></li>
             </ul>
         </div>
-        <div>
+        <div id="search">
             <i class="fa-solid fa-magnifying-glass fa-lg"></i>
             <input type="text" placeholder="무비플래닛 통합검색">
         </div>
@@ -38,7 +39,12 @@
     <hr style="width: 95%; height:1px; border:none; background-color: darkgray;">
 
     <div class="collection">
-        
+        <form>
+            <div><input type="text" placeholder="아이디" class="id-password"></div>
+            <div><input type="password" placeholder="비밀번호" class="id-password"></div>
+            <button type="submit">로그인</button>
+        </form>
+        <div id="signup"><a href="./signup.html">회원이 아니신가요?</a></div>
     </div>
 </body>
 </html>
