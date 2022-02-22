@@ -1,15 +1,36 @@
 @charset "UTF-8";
 
-.logo {
-    font-family: 'Lalezar', cursive;
-    font-size: 45pt;
-    word-spacing: 10px;
-    letter-spacing: 1px;
-    color:mediumslateblue;
-    margin-top: 0px;
-    margin-left: 20px;
-}
-
 body{
     background-color: black;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
+.header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.header a:link, .header a:visited { text-decoration: none; color:whitesmoke}
+.header a:hover { color: slateblue}
+
+#logo {
+    font-family: 'Lalezar', cursive;
+    font-size: 45pt;
+    font-weight: bold;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    color:mediumslateblue;
+    margin: 0px 20px;
+}
+
+#navi {
+    padding-right: 35px;
+}
+#navi li { 
+    list-style-type: none;
+    float: left;
+    padding: 0 20px 0 0;
+}
+
