@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.collection {
+.login {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -9,20 +9,20 @@
     text-align: center;
 }
 
-.collection input, button {
+.login input, button {
     width: 100%;
     height: 50px;
     border-radius: 5px;
     font-size: 19px;
 }
 
-.collection input {
+.login input {
     box-sizing: border-box;
     background-color: whitesmoke;
     color: black;
     padding-left: 20px;
 }
-.collection input::placeholder {
+.login input::placeholder {
     color: rgb(179, 179, 179);
 }
 
@@ -47,7 +47,7 @@ button:hover {
 }
 
 @media (max-width: 720px) {
-    .collection{
+    .login{
         margin-top: 60px;
     }
     input, button {

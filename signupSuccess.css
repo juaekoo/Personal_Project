@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.signup-success {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.text1 {
+    font-size: 25pt;
+    margin-bottom: 20px;
+}
+.text2 {
+    font-size: 30pt;
+    margin-bottom: 20px;
+}
+
+.text2 {
+    color: blueviolet;
+    background: linear-gradient(to right, #b38dfa, #7bf9fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gohome {
+    font-size: 20pt;
+}
+
+.gohome :link, .gohome :visited {
+    text-decoration: none;
+    color: mediumslateblue;
+}
+.fa-couch {
+    color: mediumslateblue;
+}
+
+a {
+    padding: 10pt;
+}
+
+@media (max-width: 720px) {
+}
