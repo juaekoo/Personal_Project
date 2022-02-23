@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" type="text/css" href="./Header.css">
+    <link rel="stylesheet" type="text/css" href="./signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="./moviedata.js"></script>
     <style type="text/css">
@@ -25,7 +26,7 @@
     <div class="header-bottom">
         <div id="menu">
             <ul>
-                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./home.html">HOME</a></li>
                 <li><a href="./comingSoon.html">개봉예정</a></li>
                 <li><a href="./collection.html">컬렉션</a></li>
             </ul>
@@ -37,8 +38,59 @@
     </div>
     <hr style="width: 95%; height:1px; border:none; background-color: darkgray;">
 
-    <div class="collection">
-        
+    <div class="signup">
+        <form>
+            <div class="memberinfo">
+                <label for="email-id">이메일</label>
+                <div class="emaildiv">
+                    <input type="text" placeholder="이메일" id="email-id">
+                    <span>@</span>
+                    <select name="email" id="email-option">
+                        <option value disabled selected>선택해주세요</option>
+                        <option>naver.com</option>
+                        <option>daum.net</option>
+                        <option>google.com</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="memberinfo">
+                <label for="password">비밀번호</label>
+                <div class="description">영문, 숫자를 포함한 8자 이상을 입력해주세요.</div>
+                <input type="password" placeholder="비밀번호" id="password">
+            </div>
+
+            <div class="memberinfo">
+                <label for="passwordCheck">비밀번호 확인</label>
+                <div><input type="password" placeholder="비밀번호 확인" id="passwordCheck"></div>
+            </div>
+
+            <div class="memberinfo">
+                <label for="nickname">닉네임</label>
+                <div class="description">2~10자를 입력해주세요.</div>
+                <input type="text" placeholder="별명" id="nickname">
+            </div>
+
+            <div class="memberinfo">
+                <div><label>약관동의</label></div>
+                <div class="tacCheck">
+                    <input type="checkbox" name="termsAndConditions" value="all">전체 약관에 동의합니다.
+                </div>
+                <hr>
+                <div class="tacCheck">
+                    <input type="checkbox" name="termsAndConditions" value="age14">만 14세 이상입니다.(필수)
+                </div>
+                <div class="tacCheck">
+                    <input type="checkbox" name="termsAndConditions" value="essential">서비스 이용약관(필수)
+                </div>
+                <div class="tacCheck">
+                    <input type="checkbox" name="termsAndConditions" value="add">이벤트 알림 수신(선택)
+                </div>
+            </div>
+           
+            <div class="signupSubmit"><button type="submit">회원가입하기</button></div>
+
+        </form>
     </div>
 </body>
 </html>
