@@ -11,20 +11,36 @@
 table {
     width: 100%;
     font-weight: 100;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    text-align: left;
+    border: solid 1px rgb(48, 1, 36);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgb(243, 172, 184)
 }
 
 table thead {
-    font-size: 20pt;
+    font-size: 25pt;
+    font-weight: lighter;
+    letter-spacing: 5px;
 }
 
-th{
-    border: solid 1px white;
+
+th {
+    color: palevioletred;
+    padding: 0px 20px;
 }
 
 td{
-    border: solid 1px white;
-    font-size: 25pt;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 15pt;
+    border: solid 1px #300130;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    
 }
 
 button {
@@ -32,15 +48,15 @@ button {
     height: 35px;
 
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: blueviolet;
+    background-color: palevioletred;
     color: black;
     margin: 20px 0px;
     border-radius: 30px;
     font-size: 13pt;
 }
 button:hover {
-    background-color: plum;
-    box-shadow: 0px 0px 15px palevioletred;
+    background-color: rgb(243, 172, 184);
+    box-shadow: 0px 0px 15px rgb(243, 172, 184);
 }
 
 @media (max-width: 720px) {
