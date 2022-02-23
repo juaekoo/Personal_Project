@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.collection {
+    font-family: 'Lalezar', 'Noto Sans KR';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%
+}
+
+table {
+    width: 100%;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+table thead {
+    font-size: 20pt;
+}
+
+th{
+    border: solid 1px white;
+}
+
+td{
+    border: solid 1px white;
+    font-size: 25pt;
+}
+
+button {
+    width: 60pt;
+    height: 35px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: blueviolet;
+    color: black;
+    margin: 20px 0px;
+    border-radius: 30px;
+    font-size: 13pt;
+}
+button:hover {
+    background-color: plum;
+    box-shadow: 0px 0px 15px palevioletred;
+}
+
+@media (max-width: 720px) {
+}

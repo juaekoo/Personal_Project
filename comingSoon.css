@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.container {
+    font-family: 'Lalezar', 'Noto Sans KR';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 50px auto;
+    gap: 10px 10px;
+    grid-template-areas: 
+        "menuname   menuname   .  .   .  sort"
+        "menu  movie  movie  movie movie  movie"
+}
+
+.menuname {
+    grid-area: menuname;
+    font-size: 30pt;
+    color: rgb(157, 150, 250)
+}
+
+.menu {
+    grid-area: menu;
+    font-size: 20pt;
+}
+
+.sort {
+    grid-area: sort;
+}
+
+.movies {
+    grid-area: movie;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+img {
+    text-align: center;
+    max-width: 95%;
+    height: 300px;  
+}
+
+select {
+    height: 30px;
+    
+}
+
+@media (max-width: 720px) {
+}

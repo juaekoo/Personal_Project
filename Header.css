@@ -10,7 +10,6 @@ input::placeholder {
     font-family: 'Lalezar', 'Noto Sans KR';
 }
 
-
 .header-top {
     display: flex;
     justify-content:space-between;
