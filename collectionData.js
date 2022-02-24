@@ -1,7 +1,7 @@
 const collectionData = [
     {
     title: '눈 오는날의 영화들',
-    movies: '헤이트풀8, 러브레터, 나홀로집에',
+    movie: '헤이트풀8, 러브레터, 나홀로집에',
     summary: '눈오는 배경을 가진 영화들이에요!'
     },
     {
@@ -31,11 +31,8 @@ collectionData.forEach( (item, index) => {
         
         elem.appendChild(text);
         if(keyName === 'title') {
-            elem.setAttribute('style', 'color: white');
-        }
-        if(keyName === 'movies') {
-            // elem.setAttribute('style', 'color: plum');
-        }
+            elem.setAttribute('style', 'color: whitesmoke;');
+        } 
         tr.appendChild(elem);
     }
 

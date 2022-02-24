@@ -35,10 +35,24 @@
             <input type="text" placeholder="무비플래닛 통합검색">
         </div>
     </div>
-    <hr style="width: 95%; height:1px; border:none; background-color: darkgray;">
+    <hr id="menubar">
 
     <div class="make-collection">
+        <div class="titlehead">컬렉션 이름</div>
+        <input type="text" class="titlebox" name="title" maxlength="15" placeholder="15자 이내로 입력하세요."/>
         
+        <hr class="hr1">
+        
+        <div class="movieshead">영화명</div>
+        <textarea class="moviesbox" name="movies" maxlength="50" 
+            rows="5" placeholder="50자 이내로 입력하세요."></textarea>
+        <hr class="hr2">
+        
+        <div class="summaryhead">컬렉션 설명</div>
+        <textarea class="summarybox" name="summary" maxlength="50"
+            rows="5" placeholder="50자 이내로 입력하세요."></textarea>
+        
+        <button type="submit" class="submitBtn">만들기</button>
     </div>
 
 </body>

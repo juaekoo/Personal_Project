@@ -68,6 +68,10 @@ input::placeholder {
     color: rgb(72, 37, 107);
 }
 
+#menubar {
+    width: 95%; height:1px; border:none; background-color: darkgray;
+}
+
 @media (max-width: 720px) {
     .header-top, .header-bottom{
         display: block;

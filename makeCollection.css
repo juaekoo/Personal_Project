@@ -1,5 +1,82 @@
 @charset "UTF-8";
 
+.make-collection {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(4, minmax(50px, auto));
+    grid-template-areas: 
+        "titlehead      titlebox"
+        "movieshead     moviesbox"
+        "summaryhead    summarybox"
+        ".              submitBtn";
+    
+    font-size: 15pt;
+    gap: 10pt;
+}
+
+.titlehead { 
+    grid-area: titlehead;
+}
+
+.titlebox { 
+    grid-area: titlebox;
+    font-family: 'Lalezar', 'Noto Sans KR';
+    font-size: 15pt;
+
+}
+
+.movieshead { 
+    grid-area: movieshead;
+}
+
+.moviesbox { 
+    grid-area: moviesbox;
+    font-family: 'Lalezar', 'Noto Sans KR';
+    font-size: 15pt;
+}
+
+.summaryhead { 
+    grid-area: summaryhead;
+}
+
+.summarybox { 
+    font-family: 'Lalezar', 'Noto Sans KR';
+    grid-area: summarybox;
+    font-size: 15pt;
+}
+
+.submitBtn { 
+    grid-area: submitBtn;
+    align-self: start;
+    justify-self: end;
+}
+
+.hr1, .hr2 {
+    height:1px; 
+    border:none; 
+    background-color: darkgray;
+}
+
+button {
+    width: 60pt;
+    height: 35px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: palevioletred;
+    color: black;
+    margin: 20px 0px;
+    border-radius: 30px;
+    font-size: 13pt;
+}
+button:hover {
+    background-color: rgb(243, 172, 184);
+    box-shadow: 0px 0px 15px rgb(243, 172, 184);
+}
 
 @media (max-width: 720px) {
 }
