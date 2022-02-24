@@ -8,10 +8,12 @@
     width: 650px;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: repeat(4, minmax(50px, auto));
+    grid-template-rows: repeat(6, minmax(50px, auto));
     grid-template-areas: 
         "titlehead      titlebox"
-        "movieshead     moviesbox"
+        "movieshead1     box1"
+        "movieshead2     box2"
+        "movieshead3     box3"
         "summaryhead    summarybox"
         ".              submitBtn";
     
@@ -19,7 +21,7 @@
     gap: 10pt;
 }
 
-.titlehead { 
+.titlehead {
     grid-area: titlehead;
 }
 
@@ -27,26 +29,39 @@
     grid-area: titlebox;
     font-family: 'Lalezar', 'Noto Sans KR';
     font-size: 15pt;
-
 }
 
-.movieshead { 
-    grid-area: movieshead;
+.movieshead1 {
+    grid-area: movieshead1;
+}
+.movieshead2 {
+    grid-area: movieshead2;
+}
+.movieshead3 {
+    grid-area: movieshead3;
+}
+.box1 {
+    grid-area: box1;
+}
+.box2 {
+    grid-area: box2;
+}
+.box3 {
+    grid-area: box3;
 }
 
-.moviesbox { 
-    grid-area: moviesbox;
+.moviebox { 
     font-family: 'Lalezar', 'Noto Sans KR';
     font-size: 15pt;
+    background-color: rgb(234, 223, 252);
 }
 
-.summaryhead { 
+.summaryhead {
     grid-area: summaryhead;
 }
-
 .summarybox { 
-    font-family: 'Lalezar', 'Noto Sans KR';
     grid-area: summarybox;
+    font-family: 'Lalezar', 'Noto Sans KR';
     font-size: 15pt;
 }
 
@@ -56,16 +71,9 @@
     justify-self: end;
 }
 
-.hr1, .hr2 {
-    height:1px; 
-    border:none; 
-    background-color: darkgray;
-}
-
 button {
     width: 60pt;
     height: 35px;
-
     font-family: 'Noto Sans KR', sans-serif;
     background-color: palevioletred;
     color: black;
