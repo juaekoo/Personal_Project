@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <link rel="stylesheet" type="text/css" href="./Header.css">
-    <link rel="stylesheet" type="text/css" href="./comingSoon.css">
+    <link rel="stylesheet" type="text/css" href="./upcoming.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="text/javascript" src="./moviedata.js"></script>
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
@@ -27,7 +26,7 @@
         <div id="menu">
             <ul>
                 <li id="homemenu"><a href="./home.html">HOME</a></li>
-                <li id="soonmenu"><a href="./comingSoon.html">개봉예정</a></li>
+                <li id="upcomingmenu"><a href="./upcoming.html">개봉예정</a></li>
                 <li id="collmenu"><a href="./collection.html">컬렉션</a></li>
             </ul>
         </div>
@@ -52,38 +51,10 @@
                 <option value="date">개봉일순</option>
             </select>
        
-        <div class="movies">
-            <div class="movie">
-                <div class="img-wrapper"><img src="images/Uncharted.jpg"></div>
-                <div>완다비전<span>/</span><span>Box office</span></div>
-                <div>3월 3일</div>
-            </div>
-            <div class="movie">
-                <div class="img-wrapper"><img src="images/Uncharted.jpg"></div>
-                <div>완다비전<span>/</span><span>Box office</span></div>
-                <div>3월 3일</div>
-            </div>
-            <div class="movie">
-                <div class="img-wrapper"><img src="images/WandaVision.jfif"></div>
-                <div>완다비전<span>/</span><span>Box office</span></div>
-                <div>3월 3일</div>
-            </div>
-            <div class="movie">
-                <div class="img-wrapper"><img src="images/WandaVision.jfif"></div>
-                <div>완다비전<span>/</span><span>Box office</span></div>
-                <div>3월 3일</div>
-            </div>
-            <div class="movie">
-                <div class="img-wrapper"><img src="images/Uncharted.jpg"></div>
-                <div>완다비전<span>/</span><span>Box office</span></div>
-                <div>3월 3일</div>
-            </div>
-            <div class="movie">
-                <div class="img-wrapper"><img src="images/WandaVision.jfif"></div>
-                <div>완다비전<span>/</span><span>Box office</span></div>
-                <div>3월 3일</div>
-            </div>
-        </div>
+        <div class="upcomings"></div>
+
+        <script type="text/javascript" src="./upcomingData.js"></script>
+        <script type="text/javascript" src="./upcomingDataList.js"></script>
     </form>
 </body>
 </html>

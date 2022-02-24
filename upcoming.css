@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#soonmenu :visited { color: blueviolet }
+#upcomingmenu :visited { color: blueviolet }
 
 .container {
     font-family: 'Lalezar', 'Noto Sans KR';
@@ -32,7 +32,7 @@
     grid-area: sort;
 }
 
-.movies {
+.upcomings {
     grid-area: movie;
     display: flex;
     flex-wrap: wrap;
