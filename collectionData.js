@@ -14,6 +14,13 @@ const collectionData = [
     summary: ''
     },
     {
+    title: '음악이 좋은 영화',
+    movie1: '스파이터맨:뉴유니버스', 
+    movie2: '베이비 드라이버',
+    movie3: '치코와 리타',
+    summary: '🎵🎵'
+    },
+    {
     title: '하마터면 눈물흘릴뻔...',
     movie1: '소울', 
     movie2: '업',
@@ -21,31 +28,3 @@ const collectionData = [
     summary: '휴지 한 장 준비하세요ㅠㅠ'
     }
 ]
-
-const tbody = document.querySelector('#tbody');
-
-collectionData.forEach( (item, index) => {
-    const tr = document.createElement('tr');
-    const keys = Object.keys(item);
-
-    for(let i=0; i<keys.length; i++) {
-        const keyName = keys[i];
-        const value = item[keyName];
-
-        const elem = document.createElement('td');
-        const text = document.createTextNode(value);
-        
-        elem.appendChild(text);
-        if(keyName === 'title') {
-            elem.setAttribute('style', 'color: whitesmoke;');
-        } 
-        tr.appendChild(elem);
-    }
-
-    tbody.appendChild(tr);
-})
-
-
-document.querySelector('#makeColBtn').addEventListener('click', function(){
-    location.assign('./makeCollection.html')
-});

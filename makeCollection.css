@@ -29,6 +29,7 @@
     grid-area: titlebox;
     font-family: 'Lalezar', 'Noto Sans KR';
     font-size: 15pt;
+    background-color: rgb(241, 223, 237);
 }
 
 .movieshead1 {
@@ -53,7 +54,7 @@
 .moviebox { 
     font-family: 'Lalezar', 'Noto Sans KR';
     font-size: 15pt;
-    background-color: rgb(234, 223, 252);
+    background-color: rgb(241, 223, 237);
 }
 
 .summaryhead {
@@ -63,6 +64,7 @@
     grid-area: summarybox;
     font-family: 'Lalezar', 'Noto Sans KR';
     font-size: 15pt;
+    background-color: rgb(241, 223, 237);
 }
 
 .submitBtn { 
