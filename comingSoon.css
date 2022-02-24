@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+#soonmenu :visited { color: blueviolet }
+
 .container {
     font-family: 'Lalezar', 'Noto Sans KR';
     position: absolute;

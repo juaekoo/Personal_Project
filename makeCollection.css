@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+#collmenu :visited { color: blueviolet }
+
 .make-collection {
     position: absolute;
     left: 50%;

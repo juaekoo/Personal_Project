@@ -21,7 +21,7 @@ const collectionData = [
     summary: '🎵🎵'
     },
     {
-    title: '하마터면 눈물흘릴뻔...',
+    title: '눈물한방울 흘릴뻔한...',
     movie1: '소울', 
     movie2: '업',
     movie3: '',
