@@ -41,6 +41,12 @@
 .movie {
     width: 20%;
     margin-bottom: 20px;
+    color:bisque;
+    letter-spacing: 1pt;
+}
+.movie a:link, .movie a:visited { 
+    text-decoration: none; 
+    color:dimgrey
 }
 
 .img-wrapper {
@@ -56,6 +62,13 @@
     width: 100%; 
     height: 100%;
     object-fit: cover;
+}
+.img-wrapper img:hover {
+    box-shadow: 1px 1px 5px gray;
+}
+
+.date {
+    font-size: 17pt;
 }
 
 select {

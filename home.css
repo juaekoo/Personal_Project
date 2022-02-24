@@ -32,6 +32,9 @@ h2 {
     object-fit: cover;
 
 }
+.img-wrapper img:hover {
+    box-shadow: 1px 1px 5px gray;
+}
 
 .boxoffice, .netflix, .disneyPlus {
     display: flex;
