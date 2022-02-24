@@ -15,7 +15,7 @@ table {
     font-weight: 100;
     letter-spacing: 4px;
     text-align: left;
-    border: solid 1px rgb(48, 1, 36);
+    border: solid 1px rgb(107, 5, 82);
     border-top: none;
     border-left: none;
     border-right: none;
@@ -38,7 +38,7 @@ td{
     box-sizing: border-box;
     padding: 10px 20px;
     font-size: 15pt;
-    border: solid 1px #300130;
+    border: solid 1px rgb(107, 5, 82);
     border-left: none;
     border-right: none;
     border-bottom: none;
