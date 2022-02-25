@@ -33,7 +33,7 @@ h2 {
 
 }
 .img-wrapper img:hover {
-    box-shadow: 1px 1px 5px gray;
+    filter: brightness(110%); 
 }
 
 .boxoffice, .netflix, .disneyPlus {

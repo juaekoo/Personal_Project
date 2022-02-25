@@ -41,7 +41,7 @@
 .movie {
     width: 20%;
     margin-bottom: 20px;
-    color:bisque;
+    color:rgb(242, 236, 255);
     letter-spacing: 1pt;
 }
 .movie a:link, .movie a:visited { 
@@ -64,7 +64,7 @@
     object-fit: cover;
 }
 .img-wrapper img:hover {
-    box-shadow: 1px 1px 5px gray;
+    filter: brightness(110%); 
 }
 
 .date {
