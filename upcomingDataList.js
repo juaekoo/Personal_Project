@@ -24,20 +24,14 @@ upcomingData.forEach( (item, index) => {
             moviediv.appendChild(div);
 
         } else if (keyName === 'date') {
-            const movieDay = value.getMonth() + 1 + '월 ' + value.getDate() + '일 '
-            date = document.createTextNode(movieDay);
             if (value.length == 10){
-                const moviemonth = value.getMonth() + 1;
-                const moviedate = new Date(value).getDate();
-                const movieDay = moviemonth + '월 ' + moviedate + '일 '
+                const movieDay = new Date(value).getMonth() + 1 + '월 ' + new Date(value).getDate() + '일 '
                 date = document.createTextNode(movieDay);
             } else if ( value.length == 7 ) {
-                const moviemonth = new Date(value).getMonth() + 1;
-                const movieDay = moviemonth + '월 '
+                const movieDay = new Date(value).getMonth() + 1 + '월 '
                 date = document.createTextNode(movieDay);
             } else if (value.length == 4) {
-                const movieyear = new Date(value).getFullYear();
-                const movieDay = movieyear + '년 '
+                const movieDay = new Date(value).getFullYear() + '년 '
                 date = document.createTextNode(movieDay);
             }
             span.appendChild(date);
