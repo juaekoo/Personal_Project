@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $('#loginBtn').click(function(){
 
+        $('#alarm').css('visibility', 'hidden');
         // 각 사이트의 아이디 규칙
         // 네이버: 5~20자의 영문 소문자, 숫자와 특수기호(_),(-)만 사용 가능 (반드시 첫문자는 영/숫자만 가능.)
         // 다음 : 4~20자의 영문 대소문자, 숫자와 특수기호(_),(-)만 사용 가능
@@ -17,19 +18,21 @@ $(document).ready(function(){
         if(!email) {
             $('input[name="email"]').css('border', 'solid 1px red');
             $('input[name="email"]').css('box-shadow', '0px 0px 5px 3px firebrick');
-        } else if(!emailFormat.test(email)){
-            $('#alarm').html('이메일 형식이 올바르지 않습니다.');
-            $('#alarm').css('visibility', 'visible');
-        }
+        } 
         if(!password) {
             $('input[name="password"]').css('border', 'solid 1px red');
             $('input[name="password"]').css('box-shadow', '0px 0px 5px 3px firebrick');
+        } 
+        if (!emailFormat.test(email) && !passwordFormat.test(password)){
+            $('#alarm').html('이메일과 비밀번호 형식이 올바르지 않습니다.');
+            $('#alarm').css('visibility', 'visible');
+        } else if(!emailFormat.test(email)){
+            $('#alarm').html('이메일 형식이 올바르지 않습니다.');
+            $('#alarm').css('visibility', 'visible');
         } else if(!passwordFormat.test(password)){
             $('#alarm').html('비밀번호 형식이 올바르지 않습니다.');
             $('#alarm').css('visibility', 'visible');
-        }
-
-        if(emailFormat.test(email) && passwordFormat.test(password)) {
+        } else {
             location.assign('home.html');
         }
     })
