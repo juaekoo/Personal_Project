@@ -50,6 +50,7 @@ button:hover {
 #alarm {
     color: rgb(253, 68, 62);
     font-size: 13pt;
+    visibility: hidden;
 }
 
 @media (max-width: 720px) {

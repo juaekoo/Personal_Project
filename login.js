@@ -18,13 +18,15 @@ $(document).ready(function(){
             $('input[name="email"]').css('border', 'solid 1px red');
             $('input[name="email"]').css('box-shadow', '0px 0px 5px 3px firebrick');
         } else if(!emailFormat.test(email)){
-            $('#alarm').html('이메일 형식이 올바르지 않습니다.')
+            $('#alarm').html('이메일 형식이 올바르지 않습니다.');
+            $('#alarm').css('visibility', 'visible');
         }
         if(!password) {
             $('input[name="password"]').css('border', 'solid 1px red');
             $('input[name="password"]').css('box-shadow', '0px 0px 5px 3px firebrick');
         } else if(!passwordFormat.test(password)){
-            $('#alarm').html('비밀번호 형식이 올바르지 않습니다.')
+            $('#alarm').html('비밀번호 형식이 올바르지 않습니다.');
+            $('#alarm').css('visibility', 'visible');
         }
 
         if(emailFormat.test(email) && passwordFormat.test(password)) {
