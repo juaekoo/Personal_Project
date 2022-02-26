@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 .login {
+    display: inline-block;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translateX(-50%);
     width: 350px;
-    text-align: center;
 }
 
 .login input, button {
@@ -20,6 +20,7 @@
     box-sizing: border-box;
     background-color: whitesmoke;
     color: black;
+    margin-top: 10px;
     padding-left: 20px;
 }
 .login input::placeholder {
@@ -38,12 +39,17 @@ button:hover {
 }
 
 #signup {
-    display: inline-block;
+    text-align: center;
 }
 #signup :link, #signup :visited {
     text-decoration: none;
     color: darkslateblue;
     font-size: 16pt;
+}
+
+#alarm {
+    color: rgb(253, 68, 62);
+    font-size: 15pt;
 }
 
 @media (max-width: 720px) {
