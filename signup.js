@@ -1,16 +1,20 @@
 $(document).ready(function(){
 
-
-    // 전체약관에 체크하면 하단전체 체크, 전체약관 체크해제하면 하단전체 체크해제
-    $('input:checkbox[name="termsAll"]').click(function(){
-        $('input:checkbox[name="terms14"]')
-            .prop('checked', !($('input:checkbox[name="terms14"]').is(':checked')));
-        $('input:checkbox[name="termsService"]')
-            .prop('checked', !($('input:checkbox[name="termsService"]').is(':checked')));
-        $('input:checkbox[name="termsEvent"]')
-            .prop('checked', !($('input:checkbox[name="termsEvent"]').is(':checked')));
+    $('#termsAll').click(function(){
+        if ( $('#termsAll').is(':checked')) {
+            $('.terms').prop('checked', true);
+        } else {
+            $('.terms').prop('checked', false);
+        }
     })
 
+    $('.terms').click(function(){
+        if ( $('.terms:checked').length == 3 ) {
+            $('#termsAll').prop('checked', true);
+        } else {
+            $('#termsAll').prop('checked', false);
+        }
+    })
 
     $('#signupBtn').click(function(){
 
@@ -21,17 +25,21 @@ $(document).ready(function(){
         $('#password').removeClass('redbox');
         $('#passwordCheck').removeClass('redbox');
         $('#nickname').removeClass('redbox');
+        $('#termsAll').removeClass('redbox');
         $('#signupBtn').removeClass('redbox');
         
         var emailFormat = RegExp(/^[A-Za-z0-9_\-\'\.]+.@[A-Za-z0-9]+\.[A-Za-z0-9]+$/);
         var passwordFormat = RegExp(/^[A-Za-z0-9]{8,}$/);
+        var nicknameFormat = RegExp(/^[가-힣A-Za-z0-9]]{2,10}/);
 
         var emailID = $('#email-id').val();
         var emailOption = $('#email-option').val();
         var password = $('#password').val();     
         var passwordCheck = $('#passwordCheck').val();   
         var nickname = $('#nickname').val();  
-        var termsAll = $('input:checkbox[name="termsAll"]').is(':checked');
+        var termsAll = $('#termsAll').is(':checked');
+        var t1 = $('input[name="t1"]').is(':checked');
+        var t2 = $('input[name="t2"]').is(':checked');
 
         // 빈칸 확인
         if(!emailID || emailOption == null) {
@@ -51,10 +59,34 @@ $(document).ready(function(){
             $('#nickname').addClass('redbox');
             $('#signupBtn').addClass('redbox');
         }
-        $('input[name="termsAll"]').addClass('redbox');
-
+        if ( !(termsAll || (t1&&t2)) ) {
+            $('#termsAll').addClass('redbox');
+            $('#signupBtn').addClass('redbox');
+        }
 
         // 형식 확인
-        
+        if(!emailFormat.test(emailID)){
+            $('#email-id').addClass('redbox');
+            $('#alarmEmail').html('이메일ID 형식이 올바르지 않습니다.')
+                .css('visibility', 'visible');
+        } 
+        if(!passwordFormat.test(password)){
+            $('#password').addClass('redbox');
+            $('.description').css('color', 'firebrick')
+        }
+        if(password != passwordCheck) {
+            $('#password').addClass('redbox');
+            $('#passwordCheck').addClass('redbox');
+            $('#alarmPassword').html('비밀번호가 일치하지 않습니다.')
+                .css('visibility', 'visible');
+        }
+        if(!nicknameFormat.test(nickname)){
+            $('#password').addClass('redbox');
+            $('.description').css('color', 'firebrick')
+        }
+
+        if(emailFormat.test(emailID) && passwordFormat.test(password) && password == passwordCheck && nicknameFormat.test(nickname)) {
+            location.assign('home.html');
+        }
     })
 });

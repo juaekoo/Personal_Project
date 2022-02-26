@@ -74,6 +74,13 @@ button:hover {
     box-shadow: 0px 0px 5px 3px firebrick
 }
 
+#alarmEmail, #alarmPassword {
+    display: inline-block;
+    color: firebrick;
+    font-size: 12pt;
+    visibility: hidden;
+}
+
 @media (max-width: 720px) {
     .signup {
         position: relative;

@@ -43,6 +43,7 @@
     <div class="signup">
         <div class="memberinfo">
             <label for="email-id">이메일</label>
+            <div id="alarmEmail">'</div>
             <div class="emaildiv">
                 <input type="text" placeholder="이메일" id="email-id">
                 <span>@</span>
@@ -63,29 +64,30 @@
 
         <div class="memberinfo">
             <label for="passwordCheck">비밀번호 확인</label>
+            <div id="alarmPassword">'</div>
             <div><input type="password" placeholder="비밀번호 확인" id="passwordCheck"></div>
         </div>
 
         <div class="memberinfo">
             <label for="nickname">닉네임</label>
-            <div class="description">2~10자를 입력해주세요.</div>
+            <div class="description">한글, 영문, 숫자를 포함한 2~10자를 입력해주세요.</div>
             <input type="text" placeholder="별명" id="nickname">
         </div>
 
         <div class="memberinfo">
             <div><label>약관동의</label></div>
             <div class="tacCheck">
-                <input type="checkbox" name="termsAll">전체 약관에 동의합니다.
+                <input type="checkbox" id="termsAll">전체 약관에 동의합니다.
             </div>
             <hr>
             <div class="tacCheck">
-                <input type="checkbox" name="terms14">만 14세 이상입니다.(필수)
+                <input type="checkbox" class="terms" name="t1">만 14세 이상입니다.(필수)
             </div>
             <div class="tacCheck">
-                <input type="checkbox" name="termsService">서비스 이용약관(필수)
+                <input type="checkbox" class="terms" name="t2">서비스 이용약관(필수)
             </div>
             <div class="tacCheck">
-                <input type="checkbox" name="termsEvent">이벤트 알림 수신(선택)
+                <input type="checkbox" class="terms">이벤트 알림 수신(선택)
             </div>
         </div>
         
