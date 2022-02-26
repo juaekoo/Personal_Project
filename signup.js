@@ -78,7 +78,7 @@ $(document).ready(function(){
         } 
         if(!passwordFormat.test(password)){
             $('#password').addClass('redbox');
-            $('.description').css('color', 'firebrick')
+            $('.dpass').css('color', 'firebrick')
         }
         if(password != passwordCheck) {
             $('#password').addClass('redbox');
@@ -87,8 +87,8 @@ $(document).ready(function(){
                 .css('visibility', 'visible');
         }
         if(!nicknameFormat.test(nickname)){
-            $('#password').addClass('redbox');
-            $('.description').css('color', 'firebrick')
+            $('#nickname').addClass('redbox');
+            $('.dnick').css('color', 'firebrick')
         }
 
         if(emailFormat.test(emailID) && emailOption != null && passwordFormat.test(password) 
