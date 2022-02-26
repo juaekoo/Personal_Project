@@ -53,6 +53,11 @@ button:hover {
     visibility: hidden;
 }
 
+.redbox {
+    border: solid 1px red;
+    box-shadow: 0px 0px 5px 3px firebrick
+}
+
 @media (max-width: 720px) {
     .login{
         margin-top: 60px;
