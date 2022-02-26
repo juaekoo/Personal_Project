@@ -21,6 +21,7 @@ collectionData.forEach( (item, index) => {
     tbody.appendChild(tr);
 })
 
+
 document.querySelector('#makeColBtn').addEventListener('click', function(){
     location.assign('./makeCollection.html')
 });

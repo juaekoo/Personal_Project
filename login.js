@@ -46,6 +46,5 @@ $(document).ready(function(){
             location.assign('home.html');
         }
 
-        // 조건 만족되자마자 redbox사라지는 기능 추가 (click이벤트 밖에?)
     })
 });
