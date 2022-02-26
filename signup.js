@@ -19,7 +19,8 @@ $(document).ready(function(){
     $('#signupBtn').click(function(){
 
         // 유효성 체크에 적용되는 CSS형식 초기화
-        $('#alarm').css('visibility', 'hidden');
+        $('#alarmEmail').css('visibility', 'hidden');
+        $('#alarmPassword').css('visibility', 'hidden');
         $('#email-id').removeClass('redbox');
         $('#email-option').removeClass('redbox');
         $('#password').removeClass('redbox');
@@ -27,10 +28,12 @@ $(document).ready(function(){
         $('#nickname').removeClass('redbox');
         $('#termsAll').removeClass('redbox');
         $('#signupBtn').removeClass('redbox');
+        $('.description').css('color', '')
+
         
-        var emailFormat = RegExp(/^[A-Za-z0-9_\-\'\.]+.@[A-Za-z0-9]+\.[A-Za-z0-9]+$/);
+        var emailFormat = RegExp(/^[A-Za-z0-9_\-\'\.]+$/);
         var passwordFormat = RegExp(/^[A-Za-z0-9]{8,}$/);
-        var nicknameFormat = RegExp(/^[가-힣A-Za-z0-9]]{2,10}/);
+        var nicknameFormat = RegExp(/^[가-힣A-Za-z0-9]{2,10}$/);
 
         var emailID = $('#email-id').val();
         var emailOption = $('#email-option').val();
@@ -42,8 +45,11 @@ $(document).ready(function(){
         var t2 = $('input[name="t2"]').is(':checked');
 
         // 빈칸 확인
-        if(!emailID || emailOption == null) {
+        if(!emailID ) {
             $('#email-id').addClass('redbox');
+            $('#signupBtn').addClass('redbox');
+        }
+        if(emailOption == null) {
             $('#email-option').addClass('redbox');
             $('#signupBtn').addClass('redbox');
         }
@@ -85,7 +91,8 @@ $(document).ready(function(){
             $('.description').css('color', 'firebrick')
         }
 
-        if(emailFormat.test(emailID) && passwordFormat.test(password) && password == passwordCheck && nicknameFormat.test(nickname)) {
+        if(emailFormat.test(emailID) && emailOption != null && passwordFormat.test(password) 
+            && password == passwordCheck && nicknameFormat.test(nickname) && (termsAll || (t1&&t2)) ) {
             location.assign('home.html');
         }
     })
