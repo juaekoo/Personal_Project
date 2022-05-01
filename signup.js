@@ -93,7 +93,9 @@ $(document).ready(function(){
 
         if(emailFormat.test(emailID) && emailOption != null && passwordFormat.test(password) 
             && password == passwordCheck && nicknameFormat.test(nickname) && (termsAll || (t1&&t2)) ) {
-            location.assign('home.html');
+            //location.assign('home.html');
+            return true;
         }
+        return false;
     })
 });
